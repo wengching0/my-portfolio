@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放學後社團體驗表</title>
+</head>
+<body>
+  <h1>放學後社團體驗表</h1>
+  <p>這是介面練習，請用虛構暱稱試填。資料不會送出或保存，不能當成正式報名。</p>
+  <!-- 本次使用獨立表單元件練習；沒有提交表單，也沒有資料儲存功能。 -->
+
+  <!-- 1. 單行文字欄位：暱稱 -->
+  <p>
+    <label for="nickname">我的暱稱</label><br>
+    <input id="nickname" name="nickname" type="text" placeholder="例如：小星星">
+  </p>
+
+  <!-- 2. 下拉選單：想體驗的社團 -->
+  <p>
+    <label for="workshop">想體驗的社團</label><br>
+    <select id="workshop" name="workshop">
+      <option value="">請選擇社團</option>
+      <option value="story">故事劇場</option>
+      <option value="science">科學手作</option>
+      <option value="boardgame">桌遊挑戰</option>
+    </select>
+  </p>
+
+  <!-- 3. 單選按鈕：方便參加的日子 -->
+  <fieldset>
+    <legend>方便參加的日子</legend>
+    <p><label><input type="radio" name="day" value="tuesday"> 星期二</label></p>
+    <p><label><input type="radio" name="day" value="thursday"> 星期四</label></p>
+    <p><label><input type="radio" name="day" value="friday"> 星期五</label></p>
+  </fieldset>
+
+  <!-- 4. 複選方塊：我期待的活動方式 -->
+  <fieldset>
+    <legend>我期待的活動方式</legend>
+    <p><label><input type="checkbox" name="style" value="hands_on"> 動手製作</label></p>
+    <p><label><input type="checkbox" name="style" value="teamwork"> 和同學合作</label></p>
+    <p><label><input type="checkbox" name="style" value="sharing"> 上台分享</label></p>
+  </fieldset>
+
+  <!-- 5. 多行文字區域：想告訴老師的事 -->
+  <p>
+    <label for="message">想告訴老師的事</label><br>
+    <textarea id="message" name="message" rows="5" cols="32" placeholder="例如：我想和同學一起完成一個小作品"></textarea>
+  </p>
+
+  <!-- 6. 自訂欄位：緊急聯絡電話（單行文字欄位） -->
+  <p>
+    <label for="parent_phone">家長緊急聯絡電話</label><br>
+    <input id="parent_phone" name="parent_phone" type="text" placeholder="例如：0912-345-678">
+  </p>
+  <p>選用單行文字欄位（input type="text"），方便填寫者自由輸入數字或連字號，確保遇到緊急狀況時能及時聯繫家長。</p>
+
+  <!-- 7. 停用按鈕 -->
+  <button type="button" disabled>練習版，尚未開放報名</button>
+  <p>這個按鈕刻意停用。HTML 可以提供輸入與選擇介面，但這份練習沒有接上處理或儲存資料的功能。</p>
+</body>
+</html>
