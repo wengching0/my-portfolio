@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翁子睛作品集 Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* 導覽列 / 頭部區塊 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .header-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .status-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-weight: bold;
+        }
+
+        /* 區塊通用樣式 */
+        section {
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        /* 關於我 */
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* 技能標籤 */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: #0f172a;
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+            font-weight: 500;
+        }
+
+        /* 專案展示網格 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 聯絡區塊 */
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            color: var(--text-muted);
+            text-decoration: none;
+            background: #0f172a;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: 0.2s;
+        }
+
+        .contact-item:hover {
+            color: var(--text-main);
+            border-color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="header-content">
+                <h1>翁子睛 (Ching)</h1>
+                <p>大一新鮮人 ｜ 學習與媒材設計學系</p>
+            </div>
+            <div class="status-badge">🚀 大漂亮</div>
+        </header>
+
+        <section>
+            <h2>關於我</h2>
+            <p class="about-text">
+                你好！我是翁子睛。我對網頁與數位學習媒材設計充滿熱情，熟悉 HTML5、CSS3。這個作品集是我大學期間的學習演進基地，目標在畢業前打造出兼具視覺美感與實用性的數位學習與網頁作品。
+            </p>
+        </section>
+
+        <section>
+            <h2>核心技能樹</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5 / Semantic Markup</span>
+                <span class="skill-tag">CSS3 / Flexbox & Grid</span>
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">Git & GitHub 版本控制</span>
+                <span class="skill-tag">UI/UX Layout Design</span>
+                <span class="skill-tag">Responsive Web Design</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>精選專案展示</h2>
+            <div class="projects-grid">
+                <!-- 新增的數位科技概論卡片 -->
+                <div class="project-card">
+                    <h3>數位科技概論</h3>
+                    <p>記錄 GitHub 版本控制、HTML5 語意標籤與多媒體應用，以及 CSS 版型與無障礙網頁設計實作。</p>
+                    <a href="digital-tech.html" class="project-link">查看課程作業與紀錄 &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>大一期中專案：校園地圖導航</h3>
+                    <p>利用純前端技術打造的互動式校園地圖，整合各系館位置與即時公車資訊。</p>
+                    <a href="#" class="project-link">查看原始碼 &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h3>個人化效率管理看板</h3>
+                    <p>仿 Trello 風格的待辦事項網頁應用，支援 LocalStorage 資料持久化。</p>
+                    <a href="#" class="project-link">查看原始碼 &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h3>響應式品牌概念官網</h3>
+                    <p>針對特定新創咖啡廳設計的高質感 RWD 品牌宣傳網站，兼顧美學與載入速度。</p>
+                    <a href="#" class="project-link">查看原始碼 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>與我聯繫</h2>
+            <div class="contact-info">
+                <a href="mailto:ziqingw687@gmail.com" class="contact-item">📧 聯絡 Email</a>
+                <a href="https://github.com/wengching0/my-portfolio" target="_blank" class="contact-item">💻 GitHub 專頁</a>
+                <a href="https://www.instagram.com/wwweng1_5" target="_blank" class="contact-item">📷 Instagram</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 翁子睛. Built with Passion & Code.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

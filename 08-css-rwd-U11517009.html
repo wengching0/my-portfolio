@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從電腦版變成手機版</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 24px; font-family: "Microsoft JhengHei", sans-serif; color: #243d46; background: #f5f2eb; line-height: 1.7; }
+h1 { line-height: 1.3; } a { color: #17596e; }
+.note { padding: 12px; background: #e5eeeb; margin-bottom: 16px; }
+
+/* 修正重點：改成彈性寬度與最大寬度限制 */
+.page { width: 100%; max-width: 960px; background: white; padding: 24px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { border: 1px solid #b9cfc5; padding: 16px; }
+input { width: 100%; max-width: 420px; padding: 10px; font: inherit; }
+
+/* 手機版 (寬度 <= 600px) 自動切換為單欄 */
+@media (max-width: 600px) {
+  .cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<p><a href="digital-tech.html">&larr; 返回數位科技概論主頁</a></p>
+<br>
+
+<h1>從電腦版變成手機版</h1>
+<p class="note">已完成修正：寬畫面保持三欄，視窗縮小至 600px 以下時改為單欄。輸入框與外容器均改為彈性最大寬度，不再出現橫向溢出捲軸。</p>
+
+<main class="page">
+  <h2>我的作品展</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>故事設計</h3>
+      <p>用角色帶領讀者思考。</p>
+    </article>
+    <article class="card">
+      <h3>科學探索</h3>
+      <p>比較預測與觀察結果。</p>
+    </article>
+    <article class="card">
+      <h3>校園導覽</h3>
+      <p>帶訪客認識學習空間。</p>
+    </article>
+  </div>
+  <br>
+  <p>
+    <label for="nickname">試填暱稱（不會送出或保存）</label><br>
+    <input id="nickname" type="text" placeholder="請用虛構暱稱">
+  </p>
+</main>
+
+</body>
+</html>
