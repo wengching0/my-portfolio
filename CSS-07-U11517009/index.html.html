@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>把內容排得整齊</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 24px; font-family: "Microsoft JhengHei", sans-serif; color: #243d46; background: #f5f2eb; line-height: 1.7; }
+h1 { line-height: 1.3; } a { color: #17596e; }
+.note { padding: 12px; background: #e5eeeb; }
+
+/* 練習 A：控制整組卡片的排列，間距加大至 24px，align-items 改為 stretch 讓卡片同高 */
+.cards { display: flex; gap: 24px; align-items: stretch; flex-wrap: wrap; }
+.card { flex: 1 1 240px; background: white; padding: 16px; border: 1px solid #c9d6d0; }
+
+/* 練習 B：統一圖片高度為 160px，並使用 object-fit: cover 保持比例不變形 */
+.card img { display: block; width: 100%; height: 160px; object-fit: cover; }
+.card h2 { font-size: 22px; }
+
+</style>
+</head>
+<body>
+<h1>把內容排得整齊</h1>
+<p class="note">三張封面是本課製作的幾何 SVG，長寬比例不同，供排列與裁切練習。它們不需要網路。</p>
+<div class="cards">
+<article class="card"><img src="images/story.svg" alt="橫向故事作品幾何封面"><h2>故事偵探社</h2><p>閱讀故事，找出推理線索。</p></article>
+<article class="card"><img src="images/science.svg" alt="正方形科學作品幾何封面"><h2>小小科學推理站</h2><p>先做預測，再觀察現象，練習提出有根據的解釋。這張卡片刻意放比較長的文字。</p></article>
+<article class="card"><img src="images/guide.svg" alt="直向導覽作品幾何封面"><h2>我的主題導覽</h2><p>用三個探索點，帶訪客認識校園。</p></article>
+</div>
+</body>
+</html>
